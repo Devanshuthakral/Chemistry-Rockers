@@ -1,0 +1,159 @@
+Build a full-stack modern, SEO-optimized tuition website named "Chemistry Rockers".
+
+Tech Stack Requirements:
+Frontend:
+- React (Vite)
+- Tailwind CSS
+- Framer Motion (for animations)
+- React Router
+- Axios
+
+Backend:
+- Node.js
+- Express.js
+- MongoDB with Mongoose
+- REST API structure
+
+Database Collections:
+1. StudentsResults
+   - name
+   - class
+   - examType (Board/JEE/NEET)
+   - marks
+   - year
+
+2. ContactInquiries
+   - name
+   - email
+   - phone
+   - message
+   - classInterested
+   - mode (Online/Offline)
+
+3. Admin Login (simple protected route)
+
+------------------------------------------------
+
+🌐 WEBSITE STRUCTURE
+
+Create a modern, attractive, animated coaching website.
+
+Pages Required:
+
+1️⃣ Home Page
+- Hero section with big heading:
+  "Chemistry Rockers – Score 95+ in Chemistry"
+- Subheading motivating students
+- Animated call-to-action buttons:
+  - Join Online Classes
+  - Visit Offline Batch
+- Results Section (Dynamic from Database)
+  - Show top students with marks
+  - Example:
+    - Riya Sharma – 98/100
+    - Aarav Mehta – 95/100
+- Testimonials Section
+- Why Choose Us section
+- Animated counters (500+ Students, 95% Success Rate etc.)
+- Smooth scroll animations
+
+2️⃣ About Teacher Page
+- Teacher Name: Payal Thakral
+- Profile Image section
+- Experience section (e.g., 10+ Years Experience)
+- Specialization (Board, NEET, JEE)
+- Achievements
+- Teaching Method description
+- Animated timeline section
+
+3️⃣ Courses Page
+- Online Classes
+   - Live Zoom Classes
+   - Recorded Lectures
+   - Weekly Test Series
+- Offline Classes
+   - Classroom batches
+   - Small batch size
+   - Doubt sessions
+- Pricing cards with animations
+
+4️⃣ Results Page
+- Fetch results dynamically from MongoDB
+- Filter by class or exam type
+- Attractive card layout
+
+5️⃣ Contact Page
+- Contact Form (connected to backend)
+- Fields:
+   - Name
+   - Phone
+   - Email
+   - Class
+   - Mode (Online/Offline)
+   - Message
+- Save data to MongoDB
+- Show success message after submission
+- Display contact details:
+   - Phone number
+   - Email
+   - Address
+- Embed Google Map
+
+------------------------------------------------
+
+🎨 DESIGN REQUIREMENTS
+
+- Dark + Yellow theme (Modern coaching look)
+- Glassmorphism cards
+- Hover effects
+- Framer Motion animations
+- Smooth transitions
+- Mobile responsive
+- Attractive fonts (Google Fonts)
+
+------------------------------------------------
+
+🔎 SEO OPTIMIZATION
+
+- Proper meta tags
+- Page titles for each page
+- Keywords like:
+  "Best Chemistry Coaching",
+  "Chemistry Tuition Near Me",
+  "NEET Chemistry Classes",
+  "JEE Chemistry Coaching"
+- Sitemap.xml
+- robots.txt
+- Fast loading optimized images
+- SEO friendly URLs
+
+------------------------------------------------
+
+🔐 ADMIN PANEL
+
+- Simple admin login
+- Add student results
+- View contact form submissions
+- Delete entries
+
+------------------------------------------------
+
+📁 Project Structure:
+
+/client
+/server
+.env file for MongoDB URI
+Proper README file with setup instructions
+
+------------------------------------------------
+
+⚡ Extra Requirements:
+
+- Use environment variables
+- Add error handling
+- Form validation (frontend + backend)
+- Clean UI
+- Attractive animations
+- Deployment ready for Vercel (frontend) and Render (backend)
+
+Make the website look premium and trustworthy so students feel confident to enroll.
