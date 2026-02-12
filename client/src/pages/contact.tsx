@@ -11,9 +11,11 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { SiWhatsapp } from "react-icons/si";
 
 export default function Contact() {
   const { mutate, isPending } = useCreateContact();
+  const whatsappUrl = "https://wa.me/917988418895?text=Hello%20I%20want%20to%20join%20Chemistry%20Rockers%20Classes";
 
   const form = useForm<InsertContactInquiry>({
     resolver: zodResolver(insertContactInquirySchema),
@@ -36,8 +38,8 @@ export default function Contact() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Helmet>
-        <title>Contact Us | Chemistry Rockers</title>
-        <meta name="description" content="Get in touch with Chemistry Rockers for admissions, queries, and demo classes." />
+        <title>Contact Us | Chemistry Rockers - Specialized Chemistry Coaching</title>
+        <meta name="description" content="Get in touch with Chemistry Rockers for admissions, queries, and demo classes. Specialized Only in Chemistry Coaching." />
       </Helmet>
       <Navbar />
 
@@ -45,28 +47,51 @@ export default function Contact() {
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Contact Info */}
           <div>
-            <h1 className="text-4xl md:text-5xl font-bold font-display mb-6 text-white">Get in Touch</h1>
-            <p className="text-slate-400 text-lg mb-12">
-              Have questions about our courses or admissions? Fill out the form or visit our center.
+            <h1 className="text-4xl md:text-5xl font-bold font-display mb-6 text-slate-900">Get in Touch</h1>
+            <p className="text-slate-600 text-lg mb-12">
+              Have questions about our chemistry courses? Specialized Only in Chemistry Coaching. Reach out via form or WhatsApp.
             </p>
 
             <div className="space-y-8">
-              {[
-                { icon: MapPin, title: "Visit Us", desc: "123 Education Hub, Sector 14, Gurgaon, Haryana 122001" },
-                { icon: Phone, title: "Call Us", desc: "+91 98765 43210" },
-                { icon: Mail, title: "Email Us", desc: "info@chemistryrockers.com" },
-                { icon: Clock, title: "Office Hours", desc: "Mon - Sat: 10:00 AM - 7:00 PM" },
-              ].map((item, i) => (
-                <div key={i} className="flex gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-slate-900 border border-white/10 flex items-center justify-center shrink-0">
-                    <item.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-white">{item.title}</h3>
-                    <p className="text-slate-400">{item.desc}</p>
-                  </div>
+              <div className="flex gap-4">
+                <div className="w-12 h-12 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center shrink-0">
+                  <MapPin className="w-6 h-6 text-primary" />
                 </div>
-              ))}
+                <div>
+                  <h3 className="font-bold text-slate-900">Visit Us</h3>
+                  <p className="text-slate-600">Chemistry Rockers Center, Sector 14, Gurgaon, Haryana 122001</p>
+                </div>
+              </div>
+              
+              <div className="flex gap-4">
+                <div className="w-12 h-12 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center shrink-0">
+                  <Phone className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-slate-900">Call Us</h3>
+                  <p className="text-slate-600">+91 7988418895</p>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <div className="w-12 h-12 rounded-xl bg-[#25D366]/10 border border-[#25D366]/20 flex items-center justify-center shrink-0">
+                  <SiWhatsapp className="w-6 h-6 text-[#25D366]" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-slate-900">WhatsApp</h3>
+                  <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">Message us on WhatsApp</a>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <div className="w-12 h-12 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center shrink-0">
+                  <Mail className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-slate-900">Email Us</h3>
+                  <p className="text-slate-600">payal@chemistryrockers.com</p>
+                </div>
+              </div>
             </div>
 
             {/* Map */}
@@ -85,8 +110,8 @@ export default function Contact() {
           </div>
 
           {/* Form */}
-          <div className="bg-card p-8 md:p-10 rounded-3xl border border-white/10 shadow-2xl">
-            <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
+          <div className="bg-white p-8 md:p-10 rounded-3xl border border-slate-200 shadow-xl">
+            <h2 className="text-2xl font-bold text-slate-900 mb-6">Send us a Message</h2>
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
@@ -97,7 +122,7 @@ export default function Contact() {
                       <FormItem>
                         <FormLabel className="text-slate-300">Name</FormLabel>
                         <FormControl>
-                          <Input placeholder="John Doe" {...field} className="bg-slate-900 border-white/10" />
+                          <Input placeholder="John Doe" {...field} className="bg-white border-slate-200" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -110,7 +135,7 @@ export default function Contact() {
                       <FormItem>
                         <FormLabel className="text-slate-300">Phone</FormLabel>
                         <FormControl>
-                          <Input placeholder="+91..." {...field} className="bg-slate-900 border-white/10" />
+                          <Input placeholder="+91..." {...field} className="bg-white border-slate-200" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -125,7 +150,7 @@ export default function Contact() {
                     <FormItem>
                       <FormLabel className="text-slate-300">Email</FormLabel>
                       <FormControl>
-                        <Input placeholder="john@example.com" type="email" {...field} className="bg-slate-900 border-white/10" />
+                        <Input placeholder="john@example.com" type="email" {...field} className="bg-white border-slate-200" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -141,14 +166,17 @@ export default function Contact() {
                         <FormLabel className="text-slate-300">Class</FormLabel>
                         <Select onValueChange={field.onChange} defaultValue={field.value}>
                           <FormControl>
-                            <SelectTrigger className="bg-slate-900 border-white/10">
+                            <SelectTrigger className="bg-white border-slate-200">
                               <SelectValue placeholder="Select Class" />
                             </SelectTrigger>
                           </FormControl>
-                          <SelectContent className="bg-slate-900 border-white/10 text-white">
+                          <SelectContent className="bg-white border-slate-200 text-slate-900">
+                            <SelectItem value="9">Class 9</SelectItem>
+                            <SelectItem value="10">Class 10</SelectItem>
                             <SelectItem value="11">Class 11</SelectItem>
                             <SelectItem value="12">Class 12</SelectItem>
-                            <SelectItem value="Dropper">Dropper</SelectItem>
+                            <SelectItem value="JEE">JEE</SelectItem>
+                            <SelectItem value="NEET">NEET</SelectItem>
                           </SelectContent>
                         </Select>
                         <FormMessage />
@@ -163,11 +191,11 @@ export default function Contact() {
                         <FormLabel className="text-slate-300">Preferred Mode</FormLabel>
                         <Select onValueChange={field.onChange} defaultValue={field.value}>
                           <FormControl>
-                            <SelectTrigger className="bg-slate-900 border-white/10">
+                            <SelectTrigger className="bg-white border-slate-200">
                               <SelectValue placeholder="Select Mode" />
                             </SelectTrigger>
                           </FormControl>
-                          <SelectContent className="bg-slate-900 border-white/10 text-white">
+                          <SelectContent className="bg-white border-slate-200 text-slate-900">
                             <SelectItem value="Offline">Offline</SelectItem>
                             <SelectItem value="Online">Online</SelectItem>
                           </SelectContent>
@@ -185,7 +213,7 @@ export default function Contact() {
                     <FormItem>
                       <FormLabel className="text-slate-300">Message</FormLabel>
                       <FormControl>
-                        <Textarea placeholder="Any specific queries?" {...field} className="bg-slate-900 border-white/10 h-32" />
+                        <Textarea placeholder="Any specific queries?" {...field} className="bg-white border-slate-200 h-32" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>

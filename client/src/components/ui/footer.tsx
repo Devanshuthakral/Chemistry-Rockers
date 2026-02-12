@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { Atom, MapPin, Phone, Mail, Instagram, Facebook, Youtube } from "lucide-react";
+import { SiWhatsapp } from "react-icons/si";
 
 export function Footer() {
   return (
@@ -60,11 +61,12 @@ export function Footer() {
           <div>
             <h3 className="text-white font-bold mb-6">Our Courses</h3>
             <ul className="space-y-3">
-              <li className="text-slate-400 text-sm">Class 11th Chemistry (CBSE/JEE/NEET)</li>
-              <li className="text-slate-400 text-sm">Class 12th Chemistry (CBSE/JEE/NEET)</li>
-              <li className="text-slate-400 text-sm">Dropper Batch (JEE/NEET)</li>
-              <li className="text-slate-400 text-sm">Crash Courses</li>
-              <li className="text-slate-400 text-sm">Online Test Series</li>
+              <li className="text-slate-400 text-sm">Class 9 Chemistry Coaching</li>
+              <li className="text-slate-400 text-sm">Class 10 Chemistry Coaching</li>
+              <li className="text-slate-400 text-sm">Class 11 Chemistry Coaching</li>
+              <li className="text-slate-400 text-sm">Class 12 Chemistry Coaching</li>
+              <li className="text-slate-400 text-sm">NEET Chemistry Classes</li>
+              <li className="text-slate-400 text-sm">JEE Chemistry Coaching</li>
             </ul>
           </div>
 
@@ -75,16 +77,27 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                 <span className="text-slate-400 text-sm">
-                  123 Education Hub, Sector 14, <br /> Gurgaon, Haryana 122001
+                  Chemistry Rockers Center, Sector 14, <br /> Gurgaon, Haryana 122001
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary shrink-0" />
-                <span className="text-slate-400 text-sm">+91 98765 43210</span>
+                <a href="tel:+917988418895" className="text-slate-400 text-sm hover:text-primary transition-colors">+91 7988418895</a>
+              </li>
+              <li className="flex items-center gap-3">
+                <SiWhatsapp className="w-5 h-5 text-[#25D366] shrink-0" />
+                <a 
+                  href="https://wa.me/917988418895?text=Hello%20I%20want%20to%20join%20Chemistry%20Rockers%20Classes" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-slate-400 text-sm hover:text-primary transition-colors"
+                >
+                  Message on WhatsApp
+                </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary shrink-0" />
-                <span className="text-slate-400 text-sm">info@chemistryrockers.com</span>
+                <span className="text-slate-400 text-sm">payal@chemistryrockers.com</span>
               </li>
             </ul>
           </div>

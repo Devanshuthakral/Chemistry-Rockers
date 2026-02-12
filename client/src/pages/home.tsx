@@ -21,17 +21,18 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <Helmet>
-        <title>Chemistry Rockers | Best Chemistry Tuition for JEE, NEET & Boards</title>
-        <meta name="description" content="Master Chemistry with Payal Thakral. Top results in JEE, NEET, and CBSE Boards. Join Chemistry Rockers today." />
+        <title>Chemistry Rockers | Specialized Chemistry Coaching for JEE, NEET & Boards</title>
+        <meta name="description" content="Best Chemistry Tuition for Class 9 to 12. NEET Chemistry Coaching & JEE Chemistry Classes. Online & Offline modes available. Join Chemistry Rockers by Payal Thakral." />
+        <meta name="keywords" content="Best Chemistry Tuition Class 9 to 12, NEET Chemistry Coaching, JEE Chemistry Classes, Online Chemistry Classes India, Chemistry Coaching Near Me" />
       </Helmet>
 
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-gradient-to-b from-white to-purple-50">
         {/* Abstract Background Shapes */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-500/10 rounded-full blur-[100px] translate-y-1/3 -translate-x-1/4" />
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[100px] translate-y-1/3 -translate-x-1/4" />
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
@@ -40,28 +41,28 @@ export default function Home() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 border border-primary/10 mb-6">
                 <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                <span className="text-sm font-medium text-slate-300">Admissions Open for 2025-26</span>
+                <span className="text-sm font-semibold text-primary">Specialized Only in Chemistry Coaching</span>
               </div>
               <h1 className="text-5xl lg:text-7xl font-bold font-display leading-tight mb-6">
-                Master Chemistry <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-500">
-                  Like a Rocker
+                Chemistry Rockers – <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">
+                  Score 95+ in Chemistry
                 </span>
               </h1>
-              <p className="text-lg text-slate-400 mb-8 max-w-xl leading-relaxed">
-                Unlock your potential with conceptual learning designed for JEE, NEET, and Board Exams. Join the league of toppers today.
+              <p className="text-lg text-slate-600 mb-8 max-w-xl leading-relaxed">
+                Unlock your potential with conceptual learning designed for Class 9-12, JEE, and NEET. Classes Available Online (Zoom) & Offline Mode.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link href="/courses">
-                  <Button size="lg" className="h-14 px-8 text-base bg-primary text-primary-foreground hover:bg-primary/90 font-bold rounded-xl shadow-[0_0_20px_rgba(250,204,21,0.3)]">
-                    Explore Courses
+                  <Button size="lg" className="h-14 px-8 text-base bg-primary text-primary-foreground hover:bg-primary/90 font-bold rounded-xl shadow-lg">
+                    Join Online Classes
                   </Button>
                 </Link>
                 <Link href="/contact">
-                  <Button size="lg" variant="outline" className="h-14 px-8 text-base border-white/20 text-white hover:bg-white/5 rounded-xl">
-                    Book Demo Class
+                  <Button size="lg" variant="outline" className="h-14 px-8 text-base border-primary/20 text-primary hover:bg-primary/5 rounded-xl">
+                    Visit Offline Batch
                   </Button>
                 </Link>
               </div>
@@ -119,8 +120,8 @@ export default function Home() {
       <section className="py-24 bg-slate-900/50">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Why Choose Chemistry Rockers?</h2>
-            <p className="text-slate-400">We don't just teach chemistry; we help you visualize and understand the molecular world.</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">Why Choose Chemistry Rockers?</h2>
+            <p className="text-slate-600">Specialized Only in Chemistry Coaching. We don't just teach chemistry; we help you visualize and understand the molecular world.</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">

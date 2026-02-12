@@ -41,7 +41,7 @@ export function Navbar() {
               <Atom className="w-8 h-8 text-primary animate-[spin_10s_linear_infinite]" />
             </div>
             <div className="flex flex-col">
-              <span className="text-xl font-bold font-display text-white tracking-tight leading-none">
+              <span className="text-xl font-bold font-display text-slate-900 tracking-tight leading-none">
                 Chemistry
               </span>
               <span className="text-xl font-bold font-display text-primary tracking-tight leading-none">
@@ -55,8 +55,8 @@ export function Navbar() {
             {navLinks.map((link) => (
               <Link key={link.name} href={link.href}>
                 <span
-                  className={`text-sm font-medium transition-colors hover:text-primary cursor-pointer ${
-                    location === link.href ? "text-primary" : "text-slate-300"
+                  className={`text-sm font-semibold transition-colors hover:text-primary cursor-pointer ${
+                    location === link.href ? "text-primary" : "text-slate-600"
                   }`}
                 >
                   {link.name}
@@ -65,13 +65,13 @@ export function Navbar() {
             ))}
             {isAuthenticated && (
               <Link href="/admin">
-                <Button variant="outline" size="sm" className="border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground">
+                <Button variant="outline" size="sm" className="border-primary/50 text-primary hover:bg-primary hover:text-white">
                   Admin
                 </Button>
               </Link>
             )}
             {!isAuthenticated && (
-              <Button asChild size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold shadow-[0_0_15px_rgba(250,204,21,0.3)]">
+              <Button asChild size="sm" className="bg-primary text-white hover:bg-primary/90 font-bold shadow-md">
                 <Link href="/contact">Enroll Now</Link>
               </Button>
             )}
@@ -79,7 +79,7 @@ export function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-slate-300 hover:text-primary transition-colors"
+            className="md:hidden p-2 text-slate-600 hover:text-primary transition-colors"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -94,15 +94,15 @@ export function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-background/95 backdrop-blur-xl border-b border-white/5 overflow-hidden"
+            className="md:hidden bg-white/95 backdrop-blur-xl border-b border-slate-200 overflow-hidden"
           >
             <div className="px-4 py-6 space-y-4">
               {navLinks.map((link) => (
                 <Link key={link.name} href={link.href}>
                   <span
                     onClick={() => setIsOpen(false)}
-                    className={`block text-lg font-medium py-2 ${
-                      location === link.href ? "text-primary" : "text-slate-300"
+                    className={`block text-lg font-semibold py-2 ${
+                      location === link.href ? "text-primary" : "text-slate-600"
                     }`}
                   >
                     {link.name}
@@ -111,12 +111,12 @@ export function Navbar() {
               ))}
               {isAuthenticated && (
                  <Link href="/admin">
-                   <span onClick={() => setIsOpen(false)} className="block text-lg font-medium py-2 text-primary">
+                   <span onClick={() => setIsOpen(false)} className="block text-lg font-semibold py-2 text-primary">
                      Admin Dashboard
                    </span>
                  </Link>
               )}
-              <Button className="w-full bg-primary text-primary-foreground mt-4" onClick={() => setIsOpen(false)}>
+              <Button className="w-full bg-primary text-white mt-4 font-bold" onClick={() => setIsOpen(false)}>
                 Enroll Now
               </Button>
             </div>

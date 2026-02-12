@@ -8,24 +8,24 @@ import { Check, Zap } from "lucide-react";
 export default function Courses() {
   const courses = [
     {
-      title: "Class 11th Foundation",
-      target: "JEE / NEET / Boards",
-      description: "Build a strong base in Physical, Organic, and Inorganic Chemistry. Detailed coverage of NCERT + Competitive Level.",
-      features: ["Daily Practice Papers", "Weekly Tests", "Doubt Clearing Sessions", "NCERT Line-by-Line"],
+      title: "Class 9th & 10th Chemistry",
+      target: "Foundation for Board & Future Exams",
+      description: "Comprehensive coverage of Class 9 & 10 Chemistry syllabus with focus on conceptual understanding. Specialized Only in Chemistry Coaching.",
+      features: ["NCERT Concept Clarity", "Regular Topic-wise Tests", "Doubt Solving Sessions", "Interactive Classes"],
       popular: false,
     },
     {
-      title: "Class 12th Target",
-      target: "Board Exams + Competitive",
-      description: "Focus on Board Exam percentage along with rank improvement for JEE/NEET. rigorous testing and revision.",
-      features: ["Board Answer Writing", "Previous Year Questions", "Mock Tests", "Crash Course Included"],
+      title: "Class 11th & 12th Chemistry",
+      target: "Board Exams + Competitive Edge",
+      description: "In-depth study of Physical, Organic, and Inorganic Chemistry. Classes Available Online (Zoom) & Offline Mode.",
+      features: ["Board Exam Preparation", "Previous Year Question Practice", "Detailed Study Material PDF", "Weekly Progress Tracking"],
       popular: true,
     },
     {
-      title: "Dropper Batch",
-      target: "JEE Main & Advanced / NEET",
-      description: "Intensive 1-year program for students dedicating a year for preparation. High-paced and result-oriented.",
-      features: ["Advanced Problem Solving", "Time Management Tricks", "All India Test Series", "Personal Mentorship"],
+      title: "JEE & NEET Chemistry",
+      target: "Entrance Exam Excellence",
+      description: "Rigorous preparation for JEE and NEET with advanced problem-solving techniques and shortcuts.",
+      features: ["Exam-Oriented Question Bank", "Mock Test Series", "Personalized Attention", "Rank Booster Strategies"],
       popular: false,
     },
   ];
@@ -33,16 +33,16 @@ export default function Courses() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Helmet>
-        <title>Courses | Chemistry Rockers</title>
-        <meta name="description" content="Explore our chemistry courses for Class 11, 12, JEE, and NEET. Online and Offline batches available." />
+        <title>Courses | Chemistry Rockers - Specialized Chemistry Coaching</title>
+        <meta name="description" content="Explore our specialized chemistry courses for Class 9-12, JEE, and NEET. Classes available Online (Zoom) and Offline." />
       </Helmet>
       <Navbar />
 
       <div className="pt-32 pb-20 container mx-auto px-4">
         <div className="text-center max-w-2xl mx-auto mb-20">
-          <h1 className="text-4xl md:text-6xl font-bold font-display mb-6 text-white">Our Courses</h1>
-          <p className="text-slate-400 text-lg">
-            Structured learning paths designed to help you achieve your academic goals. Choose the program that fits your needs.
+          <h1 className="text-4xl md:text-6xl font-bold font-display mb-6 text-slate-900">Our Courses</h1>
+          <p className="text-slate-600 text-lg">
+            Specialized Only in Chemistry Coaching. Structured learning paths for Class 9-12, JEE, and NEET. Available Online & Offline.
           </p>
         </div>
 
@@ -50,28 +50,28 @@ export default function Courses() {
           {courses.map((course, index) => (
             <div 
               key={index} 
-              className={`relative flex flex-col p-8 rounded-3xl border ${
+              className={`relative flex flex-col p-8 rounded-3xl border transition-all duration-300 ${
                 course.popular 
-                  ? "bg-slate-900/80 border-primary shadow-[0_0_40px_rgba(250,204,21,0.1)] scale-105 z-10" 
-                  : "bg-card border-white/10"
+                  ? "bg-white border-primary shadow-xl scale-105 z-10" 
+                  : "bg-white/50 border-slate-200 hover:border-primary/50"
               }`}
             >
               {course.popular && (
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-slate-900 text-xs font-bold px-4 py-1.5 rounded-full flex items-center gap-1">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-white text-xs font-bold px-4 py-1.5 rounded-full flex items-center gap-1 shadow-md">
                   <Zap className="w-3 h-3" /> Most Popular
                 </div>
               )}
               
               <div className="mb-8">
-                <h3 className="text-2xl font-bold text-white mb-2">{course.title}</h3>
-                <p className="text-primary font-medium text-sm">{course.target}</p>
+                <h3 className="text-2xl font-bold text-slate-900 mb-2">{course.title}</h3>
+                <p className="text-primary font-semibold text-sm">{course.target}</p>
               </div>
               
-              <p className="text-slate-400 mb-8 flex-grow">{course.description}</p>
+              <p className="text-slate-600 mb-8 flex-grow">{course.description}</p>
               
               <ul className="space-y-4 mb-8">
                 {course.features.map((feature, i) => (
-                  <li key={i} className="flex items-start gap-3 text-slate-300 text-sm">
+                  <li key={i} className="flex items-start gap-3 text-slate-700 text-sm">
                     <Check className="w-5 h-5 text-primary shrink-0" />
                     {feature}
                   </li>
@@ -79,7 +79,7 @@ export default function Courses() {
               </ul>
 
               <Link href="/contact">
-                <Button className={`w-full h-12 text-base font-semibold ${course.popular ? "bg-primary text-primary-foreground hover:bg-primary/90" : "bg-slate-800 text-white hover:bg-slate-700"}`}>
+                <Button className={`w-full h-12 text-base font-semibold ${course.popular ? "bg-primary text-white hover:bg-primary/90" : "bg-slate-100 text-slate-900 hover:bg-slate-200"}`}>
                   Enquire Now
                 </Button>
               </Link>
@@ -89,24 +89,32 @@ export default function Courses() {
 
         {/* Modes of Learning */}
         <div className="mt-32">
-          <h2 className="text-3xl font-bold text-center text-white mb-12">Modes of Learning</h2>
+          <h2 className="text-3xl font-bold text-center text-slate-900 mb-12">Modes of Learning</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="relative group overflow-hidden rounded-3xl aspect-[16/9] md:aspect-[2/1]">
-              <div className="absolute inset-0 bg-slate-900/60 group-hover:bg-slate-900/40 transition-colors z-10" />
-              {/* classroom offline */}
+            <div className="relative group overflow-hidden rounded-3xl aspect-[16/9] md:aspect-[2/1] shadow-lg">
+              <div className="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/30 transition-colors z-10" />
               <img src="https://pixabay.com/get/gd1a92624c4f88b4198d8dd2d82a780da890358665a1578eafaecdbac0d539a46b684e68fcf6b67192370c988ba33231710c47046a34432571c548c76a1220bd7_1280.jpg" alt="Offline Classes" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               <div className="absolute bottom-8 left-8 z-20">
                 <h3 className="text-2xl font-bold text-white">Offline Classes</h3>
-                <p className="text-slate-300">Face-to-face interaction at our Gurgaon center.</p>
+                <ul className="text-slate-100 text-sm mt-2 space-y-1">
+                  <li>• Classroom Batches</li>
+                  <li>• Limited Students Per Batch</li>
+                  <li>• Personal Attention</li>
+                  <li>• Regular Tests & Doubt Solving</li>
+                </ul>
               </div>
             </div>
-            <div className="relative group overflow-hidden rounded-3xl aspect-[16/9] md:aspect-[2/1]">
-               <div className="absolute inset-0 bg-slate-900/60 group-hover:bg-slate-900/40 transition-colors z-10" />
-               {/* student with laptop online class */}
+            <div className="relative group overflow-hidden rounded-3xl aspect-[16/9] md:aspect-[2/1] shadow-lg">
+               <div className="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/30 transition-colors z-10" />
               <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&q=80&w=800" alt="Online Classes" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               <div className="absolute bottom-8 left-8 z-20">
                 <h3 className="text-2xl font-bold text-white">Online Live Classes</h3>
-                <p className="text-slate-300">Interactive live sessions from the comfort of your home.</p>
+                <ul className="text-slate-100 text-sm mt-2 space-y-1">
+                  <li>• Live Zoom Classes</li>
+                  <li>• Recorded Lectures</li>
+                  <li>• Weekly Tests & Doubt Sessions</li>
+                  <li>• Study Material PDF</li>
+                </ul>
               </div>
             </div>
           </div>
