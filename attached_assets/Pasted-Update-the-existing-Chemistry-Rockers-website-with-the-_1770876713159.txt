@@ -1,0 +1,110 @@
+Update the existing "Chemistry Rockers" website with the following modifications:
+
+--------------------------------------
+
+1️⃣ COURSE STRUCTURE UPDATE
+
+This institute is ONLY for:
+
+- Class 9 Chemistry
+- Class 10 Chemistry
+- Class 11 Chemistry
+- Class 12 Chemistry
+- NEET Chemistry
+- JEE Chemistry
+
+Remove any other subject references.
+
+Clearly mention everywhere:
+"Specialized Only in Chemistry Coaching"
+
+--------------------------------------
+
+2️⃣ ONLINE & OFFLINE CLASSES UPDATE
+
+Update Courses Page and Home Page:
+
+Online Classes:
+- Live Zoom Classes
+- Recorded Lectures
+- Weekly Tests
+- Doubt Sessions
+- Study Material PDF
+
+Offline Classes:
+- Classroom Batches
+- Limited Students Per Batch
+- Personal Attention
+- Regular Tests
+- Doubt Solving
+
+Clearly mention:
+"Classes Available Online (Zoom) & Offline Mode"
+
+--------------------------------------
+
+3️⃣ WHATSAPP INTEGRATION
+
+Add WhatsApp Redirect using this number:
+
+https://wa.me/917988418895?text=Hello%20I%20want%20to%20join%20Chemistry%20Rockers%20Classes
+
+Add:
+
+- Floating WhatsApp button (bottom right, fixed position)
+- WhatsApp button on Contact Page
+- WhatsApp number in Footer
+
+Style:
+- WhatsApp green color
+- Hover animation
+- Pulse animation effect
+
+--------------------------------------
+
+4️⃣ THEME CHANGE (IMPORTANT)
+
+Change Dark Theme to Light Attractive Theme.
+
+Theme Guidelines:
+- Background: White / Light gradient
+- Primary color: Blue or Purple
+- Accent color: Soft Yellow
+- Clean premium coaching look
+- Keep animations
+- Keep glassmorphism but light version
+
+--------------------------------------
+
+5️⃣ FOOTER UPDATE
+
+Footer must include:
+
+- Chemistry Rockers logo/name
+- Phone: +91 7988418895
+- WhatsApp clickable link
+- Email placeholder
+- Address placeholder
+- Quick Links
+- Social icons
+
+--------------------------------------
+
+6️⃣ SEO UPDATE
+
+Update meta keywords:
+
+- Best Chemistry Tuition Class 9 to 12
+- NEET Chemistry Coaching
+- JEE Chemistry Classes
+- Online Chemistry Classes India
+- Chemistry Coaching Near Me
+
+Update titles accordingly.
+
+--------------------------------------
+
+Do NOT rebuild project from scratch.
+Modify existing files cleanly.
+Maintain responsiveness and animations.
+Ensure everything works properly.
