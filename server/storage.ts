@@ -1,38 +1,61 @@
-import { type User, type InsertUser } from "@shared/schema";
-import { randomUUID } from "crypto";
+import { db } from "./db";
+import { eq, desc } from "drizzle-orm";
+import {
+  studentResults,
+  contactInquiries,
+  insertStudentResultSchema,
+  insertContactInquirySchema,
+  type StudentResult,
+  type InsertStudentResult,
+  type ContactInquiry,
+  type InsertContactInquiry,
+} from "@shared/schema";
+import { authStorage, type IAuthStorage } from "./replit_integrations/auth/storage";
 
-// modify the interface with any CRUD methods
-// you might need
+export interface IStorage extends IAuthStorage {
+  // Student Results
+  getStudentResults(): Promise<StudentResult[]>;
+  createStudentResult(result: InsertStudentResult): Promise<StudentResult>;
+  deleteStudentResult(id: number): Promise<void>;
 
-export interface IStorage {
-  getUser(id: string): Promise<User | undefined>;
-  getUserByUsername(username: string): Promise<User | undefined>;
-  createUser(user: InsertUser): Promise<User>;
+  // Contact Inquiries
+  getContactInquiries(): Promise<ContactInquiry[]>;
+  createContactInquiry(inquiry: InsertContactInquiry): Promise<ContactInquiry>;
+  deleteContactInquiry(id: number): Promise<void>;
 }
 
-export class MemStorage implements IStorage {
-  private users: Map<string, User>;
+export class DatabaseStorage implements IStorage {
+  // Inherit auth methods from authStorage
+  getUser = authStorage.getUser;
+  upsertUser = authStorage.upsertUser;
 
-  constructor() {
-    this.users = new Map();
+  // Student Results
+  async getStudentResults(): Promise<StudentResult[]> {
+    return await db.select().from(studentResults).orderBy(desc(studentResults.id));
   }
 
-  async getUser(id: string): Promise<User | undefined> {
-    return this.users.get(id);
+  async createStudentResult(result: InsertStudentResult): Promise<StudentResult> {
+    const [newResult] = await db.insert(studentResults).values(result).returning();
+    return newResult;
   }
 
-  async getUserByUsername(username: string): Promise<User | undefined> {
-    return Array.from(this.users.values()).find(
-      (user) => user.username === username,
-    );
+  async deleteStudentResult(id: number): Promise<void> {
+    await db.delete(studentResults).where(eq(studentResults.id, id));
   }
 
-  async createUser(insertUser: InsertUser): Promise<User> {
-    const id = randomUUID();
-    const user: User = { ...insertUser, id };
-    this.users.set(id, user);
-    return user;
+  // Contact Inquiries
+  async getContactInquiries(): Promise<ContactInquiry[]> {
+    return await db.select().from(contactInquiries).orderBy(desc(contactInquiries.createdAt));
+  }
+
+  async createContactInquiry(inquiry: InsertContactInquiry): Promise<ContactInquiry> {
+    const [newInquiry] = await db.insert(contactInquiries).values(inquiry).returning();
+    return newInquiry;
+  }
+
+  async deleteContactInquiry(id: number): Promise<void> {
+    await db.delete(contactInquiries).where(eq(contactInquiries.id, id));
   }
 }
 
-export const storage = new MemStorage();
+export const storage = new DatabaseStorage();
