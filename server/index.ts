@@ -72,7 +72,7 @@ app.use((req, res, next) => {
     app.use(express.static(path.join(__dirname, "dist/public")));
 
     // Handle React routes
-    app.get("*", (_req, res) => {
+    app.get("/*", (_req, res) => {
       res.sendFile(path.join(__dirname, "dist/public/index.html"));
     });
   } else {
