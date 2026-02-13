@@ -19,18 +19,20 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // ✅ Results link removed
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Courses", href: "/courses" },
-    { name: "Results", href: "/results" },
     { name: "Contact", href: "/contact" },
   ];
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-background/80 backdrop-blur-md shadow-lg border-b border-white/5" : "bg-transparent"
+        scrolled
+          ? "bg-background/80 backdrop-blur-md shadow-lg border-b border-white/5"
+          : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -56,22 +58,34 @@ export function Navbar() {
               <Link key={link.name} href={link.href}>
                 <span
                   className={`text-sm font-semibold transition-colors hover:text-primary cursor-pointer ${
-                    location === link.href ? "text-primary" : "text-slate-600"
+                    location === link.href
+                      ? "text-primary"
+                      : "text-slate-600"
                   }`}
                 >
                   {link.name}
                 </span>
               </Link>
             ))}
+
             {isAuthenticated && (
               <Link href="/admin">
-                <Button variant="outline" size="sm" className="border-primary/50 text-primary hover:bg-primary hover:text-white">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="border-primary/50 text-primary hover:bg-primary hover:text-white"
+                >
                   Admin
                 </Button>
               </Link>
             )}
+
             {!isAuthenticated && (
-              <Button asChild size="sm" className="bg-primary text-white hover:bg-primary/90 font-bold shadow-md">
+              <Button
+                asChild
+                size="sm"
+                className="bg-primary text-white hover:bg-primary/90 font-bold shadow-md"
+              >
                 <Link href="/contact">Enroll Now</Link>
               </Button>
             )}
@@ -82,7 +96,11 @@ export function Navbar() {
             className="md:hidden p-2 text-slate-600 hover:text-primary transition-colors"
             onClick={() => setIsOpen(!isOpen)}
           >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </div>
       </div>
@@ -102,21 +120,31 @@ export function Navbar() {
                   <span
                     onClick={() => setIsOpen(false)}
                     className={`block text-lg font-semibold py-2 ${
-                      location === link.href ? "text-primary" : "text-slate-600"
+                      location === link.href
+                        ? "text-primary"
+                        : "text-slate-600"
                     }`}
                   >
                     {link.name}
                   </span>
                 </Link>
               ))}
+
               {isAuthenticated && (
-                 <Link href="/admin">
-                   <span onClick={() => setIsOpen(false)} className="block text-lg font-semibold py-2 text-primary">
-                     Admin Dashboard
-                   </span>
-                 </Link>
+                <Link href="/admin">
+                  <span
+                    onClick={() => setIsOpen(false)}
+                    className="block text-lg font-semibold py-2 text-primary"
+                  >
+                    Admin Dashboard
+                  </span>
+                </Link>
               )}
-              <Button className="w-full bg-primary text-white mt-4 font-bold" onClick={() => setIsOpen(false)}>
+
+              <Button
+                className="w-full bg-primary text-white mt-4 font-bold"
+                onClick={() => setIsOpen(false)}
+              >
                 Enroll Now
               </Button>
             </div>

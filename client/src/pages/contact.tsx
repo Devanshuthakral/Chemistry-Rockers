@@ -59,7 +59,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-bold text-slate-900">Visit Us</h3>
-                  <p className="text-slate-600">Chemistry Rockers Center, Sector 14, Gurgaon, Haryana 122001</p>
+                  <p className="text-slate-600">Apex our homes phase 1 , Sector 37c, Gurgaon, Haryana 122001</p>
                 </div>
               </div>
               
@@ -89,7 +89,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-bold text-slate-900">Email Us</h3>
-                  <p className="text-slate-600">payal@chemistryrockers.com</p>
+                  <p className="text-slate-600">Payalthakral171997@gmail.com</p>
                 </div>
               </div>
             </div>
@@ -97,7 +97,7 @@ export default function Contact() {
             {/* Map */}
             <div className="mt-12 rounded-2xl overflow-hidden border border-white/10 h-64">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224345.83923192776!2d76.82493635950898!3d28.52758200617606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sGurugram%2C%20Haryana!5e0!3m2!1sen!2sin!4v1715424000000!5m2!1sen!2sin" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14032.256365937017!2d76.96406625541991!3d28.447484300000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d176970179f37%3A0xfda777b68e97ae8c!2sApex%20Our%20Homes%20Phase%20-%201!5e0!3m2!1sen!2sin!4v1770911251677!5m2!1sen!2sin"
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 
@@ -122,7 +122,7 @@ export default function Contact() {
                       <FormItem>
                         <FormLabel className="text-slate-300">Name</FormLabel>
                         <FormControl>
-                          <Input placeholder="John Doe" {...field} className="bg-white border-slate-200" />
+                          <Input placeholder="Your Name" {...field} className="bg-white border-slate-200" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -150,7 +150,7 @@ export default function Contact() {
                     <FormItem>
                       <FormLabel className="text-slate-300">Email</FormLabel>
                       <FormControl>
-                        <Input placeholder="john@example.com" type="email" {...field} className="bg-white border-slate-200" />
+                        <Input placeholder="your mail id" type="email" {...field} className="bg-white border-slate-200" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>

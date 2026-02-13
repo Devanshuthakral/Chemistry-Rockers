@@ -19,10 +19,12 @@ export function Footer() {
               Empowering students to master Chemistry with conceptual clarity and proven results in Boards, JEE, and NEET exams.
             </p>
             <div className="flex gap-4 pt-2">
-              {[
-                { icon: Instagram, href: "#" },
-                { icon: Facebook, href: "#" },
-                { icon: Youtube, href: "#" },
+            {[
+  { icon: Instagram, href: "https://www.instagram.com/chemstryrockers?igsh=MjZwdmZ6dm5hdWR1" },
+  { icon: Facebook, href: "#" },
+  { icon: Youtube, href: "https://www.youtube.com/@chemistryrocker6958" },
+
+
               ].map((social, i) => (
                 <a
                   key={i}
@@ -77,7 +79,7 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                 <span className="text-slate-400 text-sm">
-                  Chemistry Rockers Center, Sector 14, <br /> Gurgaon, Haryana 122001
+                 Apex Our homes, Sector 37c, <br /> Gurgaon, Haryana 122001
                 </span>
               </li>
               <li className="flex items-center gap-3">
@@ -97,7 +99,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary shrink-0" />
-                <span className="text-slate-400 text-sm">payal@chemistryrockers.com</span>
+                <span className="text-slate-400 text-sm">Payalthakral171997@gmail.com</span>
               </li>
             </ul>
           </div>

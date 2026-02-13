@@ -9,7 +9,7 @@ export default function About() {
     <div className="min-h-screen bg-background text-foreground">
       <Helmet>
         <title>About Payal Thakral | Chemistry Rockers - Specialized Chemistry Coaching</title>
-        <meta name="description" content="Meet Payal Thakral, an expert Chemistry educator with 15+ years of experience. Specialized Only in Chemistry coaching for JEE, NEET & Boards." />
+        <meta name="description" content="Meet Payal Thakral, an expert Chemistry educator with 10+ years of experience. Specialized Only in Chemistry coaching for JEE, NEET & Boards." />
       </Helmet>
       <Navbar />
       
@@ -24,7 +24,7 @@ export default function About() {
             <div className="aspect-[4/5] rounded-3xl overflow-hidden border border-slate-200 shadow-2xl relative z-10">
               {/* teacher portrait professional */}
               <img 
-                src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&q=80&w=800" 
+                src="/payal%20photo.jpeg"
                 alt="Payal Thakral" 
                 className="w-full h-full object-cover"
               />
@@ -50,7 +50,7 @@ export default function About() {
             
             <div className="space-y-6 text-slate-600 text-lg leading-relaxed">
               <p>
-                With over 15 years of dedicated teaching experience, Payal Thakral has become a trusted name in Chemistry education. Specialized Only in Chemistry Coaching, her unique teaching methodology focuses on simplifying complex concepts, making Chemistry accessible and enjoyable for students of all levels.
+                With over 10 years of dedicated teaching experience, Payal Thakral has become a trusted name in Chemistry education. Specialized Only in Chemistry Coaching, her unique teaching methodology focuses on simplifying complex concepts, making Chemistry accessible and enjoyable for students of all levels.
               </p>
               <p>
                 She believes that every student has the potential to excel if guided correctly. Her classes (available Online & Offline) are a blend of rigorous academic training and motivational mentorship, ensuring students build the confidence to crack JEE Mains, Advanced, and NEET.
@@ -65,7 +65,7 @@ export default function About() {
               </div>
               <div className="p-6 bg-slate-50 rounded-xl border border-slate-200">
                 <Calendar className="w-8 h-8 text-primary mb-4" />
-                <h3 className="font-bold text-slate-900 mb-1">15+ Years</h3>
+                <h3 className="font-bold text-slate-900 mb-1">10+ Years</h3>
                 <p className="text-sm text-slate-500">Teaching Experience</p>
               </div>
               <div className="p-6 bg-slate-50 rounded-xl border border-slate-200">

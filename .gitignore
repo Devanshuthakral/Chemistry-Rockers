@@ -1,6 +1,7 @@
 node_modules
 dist
+build
+.env
+.vercel
+.cache
 .DS_Store
-server/public
-vite.config.ts.*
-*.tar.gz
