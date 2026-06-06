@@ -8,7 +8,7 @@ import { Check, Zap } from "lucide-react";
 export default function Courses() {
   const courses = [
     {
-      title: "Class 9th & 10th Chemistry",
+      title: "Class 9th",
       target: "Foundation for Board & Future Exams",
       description: "Comprehensive coverage of Class 9 & 10 Chemistry syllabus with focus on conceptual understanding. Specialized Only in Chemistry Coaching.",
       features: ["NCERT Concept Clarity", "Regular Topic-wise Tests", "Doubt Solving Sessions", "Interactive Classes"],
